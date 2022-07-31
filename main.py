@@ -1,4 +1,5 @@
 import numbers
+import random
 from flask import Flask, request, abort
  
 from linebot import (
@@ -62,9 +63,11 @@ def handle_message(event):
     count = len(event.message.text)
     num = count -1
 
-    String = ["!", "まじ", "まじで", "あげぽよ", "おったまげ", "どんだけーー", "おはようだね！", "コーヒーチケット"]
+    rand = random.uniform(0, 3)
 
-    reply_message = String[num]
+    String = [["あ", "い", "う", "え"], ["それ", "れん", "もり", "わだ"], ["しばた", "ノナカ", "ほかぜ", "たけし"], ["すずむし", "れんこん", "たいよう", "コーヒー"]]
+
+    reply_message = String[num, rand]
 
     line_bot_api.reply_message(
         event.reply_token,
