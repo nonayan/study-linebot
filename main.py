@@ -69,6 +69,8 @@ def handle_message(event):
     
     if num <= 10:
         reply_message = String[num][rand]
+    elif num == 11:
+        reply_message = "11文字送ってくんな!!"
     else:
         reply_message = "10文字以上は無理やって!!"
 
