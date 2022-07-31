@@ -63,7 +63,7 @@ def handle_message(event):
     count = len(event.message.text)
     num = count -1
 
-    rand = random.uniform(0, 3)
+    rand = random.randint(0, 3)
     
     String = [["あ", "い", "う", "え"], ["それ", "れん", "もり", "わだ"], ["しばた", "ノナカ", "ほかぜ", "たけし"], ["すずむし", "れんこん", "たいよう", "コーヒー"]]
 
