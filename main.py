@@ -65,9 +65,11 @@ def handle_message(event):
 
     rand = random.uniform(0, 3)
 
-    String = [["あ", "い", "う", "え"], ["それ", "れん", "もり", "わだ"], ["しばた", "ノナカ", "ほかぜ", "たけし"], ["すずむし", "れんこん", "たいよう", "コーヒー"]]
+   # String = [["あ", "い", "う", "え"], ["それ", "れん", "もり", "わだ"], ["しばた", "ノナカ", "ほかぜ", "たけし"], ["すずむし", "れんこん", "たいよう", "コーヒー"]]
 
-    reply_message = String[num, rand]
+    String_1 = ["あ", "愛", "上い", "それだよ"]
+
+    reply_message = String_1[num]
 
     line_bot_api.reply_message(
         event.reply_token,
