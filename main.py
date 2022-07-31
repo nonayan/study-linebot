@@ -60,13 +60,11 @@ def handle_message(event):
 
     count = 0
     count = len(event.message.text)
+    num = count -1
 
-    if count == 1:
-        reply_message = "!"
-    elif count == 2:
-        reply_message = "まじ"
-    elif count == 3:
-        reply_message = "マジで"
+    String = ["!", "まじ", "まじで", "あげぽよ", "おったまげ", "どんだけーー", "おはようだね！", "コーヒーチケット"]
+
+    reply_message = String[num]
 
     line_bot_api.reply_message(
         event.reply_token,
