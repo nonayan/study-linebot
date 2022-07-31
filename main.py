@@ -1,3 +1,4 @@
+import numbers
 from flask import Flask, request, abort
  
 from linebot import (
@@ -56,9 +57,20 @@ def callback():
  
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+
+    count = 0
+    count = len(event.message.text)
+
+    if count == 1:
+        reply_message = "!"
+    elif count == 2:
+        reply_message = "まじ"
+    elif count == 3:
+        reply_message = "マジで"
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=f"あなたは{event.message.text}と言いました。")) #ここでオウム返しのメッセージを返します。
+        TextSendMessage(text=reply_message)) #ここでオウム返しのメッセージを返します。
  
 # ポート番号の設定
 if __name__ == "__main__":
