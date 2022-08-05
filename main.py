@@ -61,13 +61,13 @@ def handle_message(event):
 
     count = 0
     count = len(event.message.text)
-    num = count -1
+    num = count - 1
 
     rand = random.randint(0, 4)
     
-    String_1 = ["は？", "なに？", "かまちょかよ", "なんやねん"]
-    String_2 = ["なんやねん", "ガチ", "KP", "なえ", "りょ"]
-    String_3 = ["黙れ", "ボケー", "ズッ友", "最&高", "バおわ"]
+    String_1 = ["は", "？", "ま", "ギ", "ャ"]
+    String_2 = ["なに", "ガチ", "KP", "なえ", "りょ"]
+    String_3 = ["だまれ", "ボケー", "ズッ友", "最&高", "バおわ"]
     String_4 = ["キャパい", "アセアセ", "イケてる", "ギャルべ", "あげぽよ"]
     String_5 = ["やりらフィ", "こみこみで", "時差グラム", "生きるww", "大丈夫そ?"]
     String_6 = ["初心LOVE", "タンバルモリ", "ギャルピース", "片思いハート", "ちゅきちゅき"]
@@ -80,9 +80,6 @@ def handle_message(event):
         reply_message = String_1[rand]
     elif num == 1:
         reply_message = String_2[rand]
-
-        if event.messege.text == "しね":
-            reply_message = "お前がな"
     elif num == 2:
         reply_message = String_3[rand]
     elif num == 3:
